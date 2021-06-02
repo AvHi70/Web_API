@@ -1,0 +1,14 @@
+{
+    "persons": [{
+            "name": "John",
+            "city": "Kochi",
+            "phone": "9900"
+ 
+        },
+        {
+            "name": "Phil",
+            "city": "Varkazha",
+            "phone": "8899"
+        }
+    ]
+} 

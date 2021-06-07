@@ -2,14 +2,21 @@ const express = require('express');
 //hbs is our template now
 const hbs = require('hbs');
 const app = express();
+const path = require('path')
 
-//tells systemn that hbs is in use
+const partialFolder = path.join(__dirname, 'partials');
+
+//now system knows where our partial files are 
+hbs.registerPartials(partialFolder)
+
+//tells systemn that hbs template is in use
 app.set("view engine", "hbs");
 
 app.get('/', function(req, res){
     res.render("home", {
-        username: 'Love of God', 
-        age: '22'
+        username: 'Abhishek', 
+        age: '22', 
+        address: "Dhangadhi"
     })                  //home.hbs is not require
 });
 app.get('/about', function(req, res){
